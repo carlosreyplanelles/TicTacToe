@@ -1,41 +1,24 @@
 package com.example.tictactoe.model;
 
-import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Game {
+
+	private int id;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Table table;
 	
-	private TictactoeTable tabletop;
-	
-	private List<Player> players;
-
-	public TictactoeTable getTabletop() {
-		return tabletop;
+	public Table getTable() {
+		return table;
 	}
 
-	public void setTabletop(TictactoeTable tabletop) {
-		this.tabletop = tabletop;
+	public void setTable(Table table) {
+		this.table = table;
 	}
 
-	public List<Player> getPlayers() {
-		return players;
-	}
-
-	public void setPlayers(List<Player> players) {
-		this.players = players;
-	}
-
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
+	public void start() {
+		table.start(3);
+	}
 }

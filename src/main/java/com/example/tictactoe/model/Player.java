@@ -5,19 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
-@Entity
 public class Player {
-
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
 	
 	private String name;
 	
 	private int wins;
-	
-	private String email;
 
 	public String getName() {
 		return name;
@@ -33,18 +25,6 @@ public class Player {
 
 	public void setWins(int wins) {
 		this.wins = wins;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public int getId() {
-		return id;
 	}
 	
 }
