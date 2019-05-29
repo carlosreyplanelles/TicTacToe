@@ -1,24 +1,18 @@
 package com.example.tictactoe.model;
 
+import lombok.Data;
+import lombok.ToString;
+
+@Data
+@ToString
 public class Square {
 	
 	private String symbol;
 	private Boolean available;
 	
-	public String getSymbol() {
-		return symbol;
-	}
-	
-	public Boolean getAvailable() {
-		return available;
-	}
-	
-	public void setSymbol(String symbol) {
-		this.symbol = symbol;
-	}
-	
-	public void setAvailable(Boolean available) {
-		this.available = available;
+	public Square() {
+		symbol = "empty.png";
+		available = true;
 	}
 	
 
